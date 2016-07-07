@@ -1,0 +1,22 @@
+
+
+{{signin-header}}
+{{!-- <div id="new-overlay" class="overlay" {{action "hideAddClientForm"}}></div> --}}
+<div id="newClient">
+	<div class="imageArea">
+		<img src="{{model.image}}" id="previewImage" />
+	</div>
+	<div class="contentArea">
+		{{input type="text" id="client-name" placeholder="Client Name" value=model.name}}<br />
+		{{!-- {{input type="text" id="client-image" placeholder="Client Image" value=clientImage}} --}}
+		{{!-- {{input type="file" id="client-image" value=clientImage change="updateFileText"}} --}}
+		<input type="file" id="client-image" value={{clientImage}} onchange={{action "updateFileText"}} />
+		<div id="customFileLook">
+			<div id="chooseBtn">Choose File</div>
+			<div id="fileName">File Name</div>
+		</div>
+		{{!-- {{file-upload name=clientName}} --}}
+		<div class="submitBtn" {{action "createClient"}}>Save Changes</div>
+		<div class="goBackBtn">{{#link-to 'clients.index'}}&#8592; Go Back{{/link-to}}</div>
+	</div>
+</div>

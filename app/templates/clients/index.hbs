@@ -1,0 +1,56 @@
+{{#if session.isAuthenticated}}
+	<div class="signedin">
+		<div class="left">Welcome, {{usersName}}.</div>
+		<div class="right">
+			<div id="taskList">
+				<div class="main">Tasks</div>
+				<ul>
+					{{#link-to 'clients.new'}}<li>Add New Client</li>{{/link-to}}
+					{{#link-to 'users.new'}}<li>Add New User</li>{{/link-to}}
+					{{#link-to 'display' target="_blank"}}<li>View Live</li>{{/link-to}}
+					{{#link-to 'user.edit'}}<li>Edit Profile</li>{{/link-to}}
+					<a><li {{action 'deactivateAll'}}>Show Default Screen</li></a>
+
+				</ul>
+			</div>
+			<button {{action "signOut"}}>Sign Out</button>
+		</div>
+	</div>
+{{/if}}
+<div id="activeClient">
+	{{#each activated as |client|}}
+		<div class="welcomeMessage">
+			<img src="images/welcomeText.png" id="welcomeText" />
+			<img src="images/subText.png" id="subText" />
+			<img src="images/dwellerHead.png" id="dwellerHead" />
+		</div>
+		<div class="clientLogo">
+			<img src="{{client.image}}" />
+		</div>
+	{{else}}
+		<div class="defaultMessage">
+			<div class="defaultCont">
+				<img src="images/welcomeText.png" id="welcomeText" />
+				<img src="images/subText.png" id="subText" />
+			</div>
+			<div class="dwellerCont">
+				<img src="images/dwellerHead.png" id="dwellerHead" />
+			</div>
+		</div>
+	{{/each}}
+</div>
+<div class="fullWidthCont">
+	<div id="all_clients">
+		<div class="featureActions">
+			{{input placeholder="Search by name..." value=filter}}
+			<div class="add_new">{{#link-to 'clients.new'}}Add New Client{{/link-to}}</div>
+		</div>
+		<ul id="clients">
+			{{#each filtered as |client|}}
+				{{client-view model=client}}
+			{{else}}
+				<h1 class="noModel">No clients found. {{#link-to 'clients.new'}}Add one?{{/link-to}}</h1>
+			{{/each}}
+		</ul>
+	</div>
+</div>

@@ -1,0 +1,45 @@
+body, html {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	font-family: $opensans;
+	font-size: 14px;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+.overlay {
+	background-color: #000000;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	opacity: 0;
+	display: none;
+}
+
+
+// body .ember-view:nth-of-type(1) {
+// 	height: 100%;
+// }
+
+// body .content .ember-view {
+// 	height: auto;
+// }
+
+.ember-view {
+	height: inherit;
+
+	&.ignoreHeight {
+		height: auto;
+	}
+}
+
+.content {
+	height: 100%;
+}

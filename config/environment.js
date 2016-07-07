@@ -5,7 +5,32 @@ module.exports = function(environment) {
     modulePrefix: 'screen',
     environment: environment,
     baseURL: '/',
+    // baseURL: '/welcomescreen/prototype',
     locationType: 'auto',
+    // =========================================
+    // Firebase Stuff
+    // =========================================
+    firebase: {
+      apiKey: '',
+      authDomain: '',
+      databaseURL: '',
+      storageBucket: ''
+    },
+
+      torii: {
+        sessionServiceName: 'session'
+      },
+
+      // // if using ember-cli-content-security-policy
+      // contentSecurityPolicy: {
+      //   'script-src': ''self' 'unsafe-eval' apis.google.com',
+      //   'frame-src': ''self' https://*.firebaseapp.com',
+      //   'connect-src': ''self' wss://*.firebaseio.com https://*.googleapis.com'
+      // },
+    // =========================================
+    // End Firebase Stuff
+    // =========================================
+
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
@@ -25,11 +50,12 @@ module.exports = function(environment) {
     // ENV.APP.LOG_TRANSITIONS = true;
     // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
     // ENV.APP.LOG_VIEW_LOOKUPS = true;
+    // ENV.baseURL = '/welcomescreen/prototype';
   }
 
   if (environment === 'test') {
     // Testem prefers this...
-    ENV.baseURL = '/';
+    // ENV.baseURL = '/welcomescreen/prototype';
     ENV.locationType = 'none';
 
     // keep test console output quieter
@@ -40,7 +66,7 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-
+    ENV.baseURL = '/welcomescreen/prototype';
   }
 
   return ENV;

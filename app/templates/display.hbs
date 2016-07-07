@@ -1,0 +1,22 @@
+<div id="activeClient">
+	{{#each activated as |client|}}
+		<div class="welcomeMessage">
+			<img src="images/welcomeText.png" id="welcomeText" />
+			<img src="images/subText.png" id="subText" />
+			<img src="images/dwellerHead.png" id="dwellerHead" />
+		</div>
+		<div class="clientLogo">
+			<img src="{{client.image}}" />
+		</div>
+	{{else}}
+		<div class="defaultMessage">
+			<div class="defaultCont">
+				<img src="images/welcomeText.png" id="welcomeText" />
+				<img src="images/subText.png" id="subText" />
+			</div>
+			<div class="dwellerCont">
+				<img src="images/dwellerHead.png" id="dwellerHead" />
+			</div>
+		</div>
+	{{/each}}
+</div>

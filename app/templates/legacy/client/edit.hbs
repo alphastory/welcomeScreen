@@ -1,0 +1,9 @@
+<div id="edit_container">
+	<div class="client_image"><img src="{{model.image}}" /></div>
+	<div>{{input type="text" placeholder="Client Name" value=model.name}}</div>
+	<div>{{input type="text" placeholder="Client Image" value=model.image}}</div>
+	<div class="submitBtn" {{action "saveUpdates"}}>Save Changes</div>
+	{{#link-to 'clients'}}Go Back{{/link-to}}
+</div>
+
+Client.Edit

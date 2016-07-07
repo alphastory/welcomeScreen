@@ -1,0 +1,110 @@
+form {
+	&#signin_form {
+		width: 90%;
+		max-width: 488px;
+		margin: 81px auto;
+	}
+
+	input {
+		width: 100%;
+		border: 1px solid $lightgray;
+		padding: 15px;
+		margin: 10px;
+		font-family: $opensans;
+		font-size: 18px;
+		color: $medgray;
+		&[type=submit] {
+			background-color: $black;
+			color: $white;
+			cursor: pointer;
+			transition: background-color 0.3s;
+			&:hover {
+				background-color: #000000;
+			}
+		}
+	}
+}
+
+.signedin {
+	// overflow: auto;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	background-color: rgba( 0, 0, 0, 0.8 );
+	color: $white;
+	font-family: $opensans;
+	font-size: 16px;
+	z-index: 99;
+	.left {
+		float: left;
+		padding: 20px;
+	}
+
+	.right {
+		float: right;
+		height: 59px;
+		#taskList {
+			float: left;
+			position: relative;
+			cursor: pointer;
+			&:hover {
+				background-color: $black;
+				ul {
+					display: block;
+				}
+			}
+			.main {
+				text-align: center;
+				padding: 20px;
+				width: 200px;
+				margin-right: 2px;
+				background-color: $trueblack;
+			}
+
+			ul {
+				display: none;
+				position: absolute;
+				top: 62px;
+				left: 0px;
+				margin: 0px;
+				padding: 0px;
+				list-style-type: none;
+				width: 200px;
+				a {
+					color: white;
+					text-decoration: none;
+				}
+				
+				li {
+					padding: 15px;
+					background-color: $trueblack;
+					// margin-bottom: 2px;
+					border-top: 2px solid white;
+					cursor: pointer;
+
+					&:hover {
+						background-color: $black;
+						transition: background-color 0.3s;
+					}
+				}
+			}
+		}
+		button {
+			width: 200px;
+			height: 62px;
+			border: none;
+			color: $white;
+			font-family: $opensans;
+			font-size: 16px;
+			background-color: $trueblack;
+			border-left: 2px solid $trueblack;
+			cursor: pointer;
+			transition: all 0.3s;
+			float: right;
+			&:hover {
+				background-color: $black;
+			}
+		}
+	}
+}

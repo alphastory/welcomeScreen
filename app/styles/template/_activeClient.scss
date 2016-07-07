@@ -1,0 +1,81 @@
+#activeClient {
+	width: 100%;
+	height: 100%;
+	margin: 0 auto;
+	overflow: auto;
+
+	.welcomeMessage, .defaultMessage {
+		width: 64.947916666667%;
+		height: 100%;
+		background-color: $yellow;
+		float: left;
+		position: relative;
+
+		img {
+			display: block;
+		}
+
+		#welcomeText {
+			width: 76.984763432237%; // 1247px/960px;
+			margin-top: 27.5%;
+			margin-left: 8.019246190858%;
+		}
+
+		#subText {
+			width: 62.389735364876%;
+			margin-top: 6.111111111111%;
+			margin-left: 8.019246190858%;
+		}
+
+		#dwellerHead {
+			position: absolute;
+			bottom: 9.259259259259%;
+			left: 9.62309542903%;
+		}
+	}
+
+	.clientLogo {
+		float: right;
+		width: 35.0520833333333%;
+		position: relative;
+		height: 100%;
+
+		img {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			width: 50%;
+			transform: translateX(-50%) translateY(-50%);
+		}
+	}
+
+	.defaultMessage {
+		width: 100%;
+		float: none;
+		background-color: white;
+		.defaultCont {
+			background-color: $yellow;
+			padding: 12% 0;
+
+			#welcomeText {
+				max-width: 960px;
+				margin-top: 0px;
+				margin-bottom: 40px;
+
+			}
+			#subText {
+				max-width: 778px;
+				margin-top: 0px;
+			}
+		}
+
+		.dwellerCont {
+			padding: 3% 8%;
+			#dwellerHead {
+				position: static;
+			}
+		}
+	}
+}
+
+// 1247 / 960

@@ -1,0 +1,22 @@
+<li class="client {{if model.isActive "active"}}">
+	<div class="visible">
+        <img src="{{model.image}}" />
+    </div>
+    <div class="actions">
+    	<ul>
+        	<li class="edit">{{#link-to 'clients.client.edit' model.id}}<img src="images/editIcon.png" />{{/link-to}}</li>
+        	{{#if model.isActive}}
+	        	<li class="activate" {{action "setInactive"}}><img src="images/deactivateIcon.png" /></li>
+	        {{else}}
+		        <li class="activate" {{action "setActive"}}><img src="images/activateIcon.png" /></li>
+		    {{/if}}
+        	<li class="delete" {{action "confirmRemoveClient" model.id}}><img src="images/deleteIcon.png" /></li>
+        </ul>
+    </div>
+    <div class="remove-overlay" id="remove-overlay-{{model.id}}"></div>
+	<div class="removeConfirmation" id="remove-confirm-{{model.id}}">
+		<h1>Are you sure?</h1>
+		<div class="split" {{action "deleteClient"}}>Yes</div>
+		<div class="split" {{action "cancelRemove" model.id}}>No</div>
+	</div>
+</li>

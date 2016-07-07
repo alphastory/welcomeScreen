@@ -6,20 +6,29 @@
     <title>Screen</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700|Raleway:400,900' rel='stylesheet' type='text/css'>
 
+    <script type="text/javascript" src="libs/gs/easing/EasePack.min.js"></script>
+    <script type="text/javascript" src="libs/gs/plugins/CSSPlugin.min.js"></script>
+    <script type="text/javascript" src="libs/gs/TweenLite.min.js"></script>
+    <!-- Content-for "head" -->
     {{content-for "head"}}
-
+    <!-- /Content-for "head" -->
     <link rel="stylesheet" href="assets/vendor.css">
     <link rel="stylesheet" href="assets/screen.css">
-
+    <!-- Content-for "head-footer" -->
     {{content-for "head-footer"}}
+    <!-- /Content-for "head-footer" -->
   </head>
   <body>
+    <!-- Content-for "body" -->
     {{content-for "body"}}
+    <!-- /Content-for "body" -->
 
     <script src="assets/vendor.js"></script>
     <script src="assets/screen.js"></script>
-
+    <!-- Content-for "body-footer" -->
     {{content-for "body-footer"}}
+    <!-- /Content-for "body-footer" -->
   </body>
 </html>

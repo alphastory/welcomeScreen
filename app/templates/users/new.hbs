@@ -1,0 +1,10 @@
+{{signin-header}}
+<div id="newUser">
+	<div class="contentArea">
+		{{input type="text" id="user-name" placeholder="Display Name" value=username}}<br />
+		{{input type="email" id="user-email" placeholder="Email" value=useremail}}<br />
+		{{input type="password" id="user-password" placeholder="Password" value=userpass}}
+		<div class="submitBtn" {{action "createUser"}}>Save Changes</div>
+		<div class="goBackBtn">{{#link-to 'clients.index'}}&#8592; Go Back{{/link-to}}</div>
+	</div>
+</div>

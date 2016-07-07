@@ -1,0 +1,91 @@
+#newUser {
+	width: 90%;
+	max-width: 1000px;
+	margin: 30px auto;
+	padding: 25px;
+
+	.contentArea {
+		width: 100%; //490/835
+		position: relative;
+		margin-top: 5%;
+	}
+
+	#customFileLook {
+		margin-top: 10px;
+		overflow: auto;
+		cursor: pointer;
+		#chooseBtn {
+			transition: background-color 0.3s;
+			width: 30%;
+			background-color: $black;
+			color: $white;
+			padding: 14px;
+			text-align: center;
+			font-size: 18px;
+			float: left;
+		}
+
+		#fileName {
+			float: right;
+			width: 66%;
+			padding: 13px;
+			font-size: 18px;
+			color: $darkgray;
+			border: 1px solid #d8d8d8;
+		}
+	}
+
+	input {
+		width: 100%;
+		padding: 10px;
+		font-size: 18px;
+		margin-bottom: 10px;
+		font-family: $opensans;
+		border: 1px solid #d8d8d8;
+		padding: 13px;
+		&[type=file] {
+			opacity: 0;
+			position: absolute;
+			z-index: 9;
+			padding: 0px;
+			top: 74px;
+			height: 52px;
+			margin: 0;
+			cursor: pointer;
+			&:hover {
+				#chooseBtn {
+					background-color: $trueblack;
+				}
+			}
+		}
+	}
+
+	.submitBtn {
+		background-color: #333333;
+		color: #FFFFFF;
+		text-align: center;
+		font-family: $raleway;
+		font-weight: 400;
+		letter-spacing: 1px;
+		font-size: 18px;
+		cursor: pointer;
+		margin-top: 20px;
+		margin-bottom: 0px;
+		padding: 15px;
+		&:hover {
+			background-color: #000000;
+		}
+	}
+
+	.goBackBtn {
+		margin-top: 20px;
+		a {
+			color: $black;
+			text-decoration: none;
+			transition: color 0.3s;
+			&:hover {
+				color: $darkgray;
+			}
+		}
+	}
+}

@@ -1,0 +1,33 @@
+#removeConfirmation {
+	width: 500px;
+	background-color: #FFFFFF;
+	z-index: 2;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translateX(-50%) translateY(-50%);
+	padding: 25px;
+	margin-top: -20px;
+	opacity: 0;
+	display: block;
+
+	h1 {
+		font-family: $opensans;
+		font-size: 24px;
+		text-align: center;
+		margin-top: 0px;
+	}
+
+	div.split {
+		width: 49%;
+		padding: 10px;
+		background-color: #333333;
+		color: #FFFFFF;
+		float: left;
+		text-align: center;
+		cursor: pointer;
+		&:last-child {
+			float: right;
+		}
+	}
+}
